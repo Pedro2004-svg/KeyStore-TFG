@@ -1,0 +1,34 @@
+<%- include('../partials/header') %>
+
+<div class="max-w-[1360px] mx-auto my-7 mb-10 px-5 grid grid-cols-[minmax(0,1fr)_320px] gap-6 items-start">
+
+    <!-- Columna principal: cesta -->
+    <div class="bg-white shadow-sm">
+        <div class="px-6 pt-7 pb-6">
+            <h2 class="text-5xl font-medium text-black">Cesta</h2>
+        </div>
+        <div id="carritoContainer" class="flex flex-col bg-white">
+            <div class="text-center text-2xl py-10 text-gray-500 border border-gray-200 m-4">Cargando carrito...</div>
+        </div>
+    </div>
+
+    <!-- Columna lateral: resumen -->
+    <div class="bg-white shadow-sm sticky top-24 flex flex-col gap-4 p-6
+                after:content-['Revisa_tu_pedido_antes_de_continuar'] after:block after:pt-4 after:border-t after:border-gray-200 after:text-gray-500 after:text-sm after:leading-snug">
+        <div class="flex flex-col gap-2 text-black">
+            <span id="cartCount" class="text-base text-gray-500 font-medium">0 items</span>
+            <span id="cartTotal" class="text-3xl font-bold leading-tight">Total: $0.00</span>
+        </div>
+        <button id="buyBtn"
+            onclick="realizarCompra()"
+            disabled
+            class="w-full py-3 px-5 rounded-full bg-yellow-300 hover:bg-yellow-400 text-black text-lg font-semibold shadow-sm disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-not-allowed transition-colors">
+            💳 Finalizar Compra
+        </button>
+    </div>
+
+</div>
+
+<script type="module" src="/js/cart.js"></script>
+
+<%- include('../partials/footer') %>

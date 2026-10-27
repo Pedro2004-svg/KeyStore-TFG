@@ -1,0 +1,13 @@
+{
+  "appId": "com.example.store",
+  "appName": "KeyStore",
+  "webDir": "MOVIL",
+  "android": {
+    "allowMixedContent": true
+  },
+  "plugins": {
+        "App": {
+            "launchUrl": "miapp://compra-exitosa"
+        }
+    }
+}

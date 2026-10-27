@@ -1,0 +1,66 @@
+<%- include('../partials/header') %>
+
+<div class="max-w-[1400px] mx-auto my-8 px-5 flex-1">
+    <h1 class="text-center text-3xl font-bold text-black mb-8">📊 Estadísticas de la Tienda</h1>
+
+    <!-- Dashboard cards -->
+    <div id="dashboardCards" class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-5 mb-8"></div>
+
+    <!-- Búsqueda Avanzada -->
+    <div class="bg-white p-5 rounded-lg mb-8 shadow-sm">
+        <h2 class="text-xl font-semibold text-gray-800 mb-4">🔍 Búsqueda Avanzada</h2>
+        <form id="searchForm" class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4 mb-4">
+            <div class="flex flex-col">
+                <label for="searchTerm" class="mb-1 font-bold text-gray-700">Nombre del Juego</label>
+                <input type="text" id="searchTerm" placeholder="Ej: Mario, Zelda..."
+                    class="px-3 py-2 border border-gray-300 rounded text-sm focus:outline-none focus:border-indigo-500">
+            </div>
+            <div class="flex flex-col">
+                <label for="minPrice" class="mb-1 font-bold text-gray-700">Precio Mínimo (€)</label>
+                <input type="number" id="minPrice" min="0" step="0.01" placeholder="0"
+                    class="px-3 py-2 border border-gray-300 rounded text-sm focus:outline-none focus:border-indigo-500">
+            </div>
+            <div class="flex flex-col">
+                <label for="maxPrice" class="mb-1 font-bold text-gray-700">Precio Máximo (€)</label>
+                <input type="number" id="maxPrice" min="0" step="0.01" placeholder="100"
+                    class="px-3 py-2 border border-gray-300 rounded text-sm focus:outline-none focus:border-indigo-500">
+            </div>
+            <div class="flex flex-col">
+                <label for="sortBy" class="mb-1 font-bold text-gray-700">Ordenar por</label>
+                <select id="sortBy"
+                    class="px-3 py-2 border border-gray-300 rounded text-sm focus:outline-none focus:border-indigo-500">
+                    <option value="name">Nombre</option>
+                    <option value="price_asc">Precio (menor)</option>
+                    <option value="price_desc">Precio (mayor)</option>
+                    <option value="popular">Más vendidos</option>
+                    <option value="favorites">Más favoritos</option>
+                </select>
+            </div>
+            <button type="submit"
+                class="col-span-full bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded text-base cursor-pointer border-none transition-colors">
+                Buscar
+            </button>
+        </form>
+        <div id="searchResults" class="mt-8"></div>
+    </div>
+
+    <!-- Charts -->
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(380px,1fr))] gap-6">
+        <div class="bg-white p-5 rounded-lg shadow-sm">
+            <h2 class="text-lg font-semibold text-gray-800 mb-4">🏆 Top 10 Juegos Más Vendidos</h2>
+            <canvas id="mostSoldChart"></canvas>
+        </div>
+        <div class="bg-white p-5 rounded-lg shadow-sm">
+            <h2 class="text-lg font-semibold text-gray-800 mb-4">💰 Ingresos por Rango de Precios</h2>
+            <canvas id="revenueRangeChart"></canvas>
+        </div>
+        <div class="bg-white p-5 rounded-lg shadow-sm">
+            <h2 class="text-lg font-semibold text-gray-800 mb-4">❤️ Top 10 Juegos Más Favoritos</h2>
+            <canvas id="mostFavoritedChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+
+<%- include('../partials/footer') %>
