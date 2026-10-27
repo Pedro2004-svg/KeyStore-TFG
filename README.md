@@ -8,7 +8,7 @@ Este proyecto consiste en una plataforma integral para la gestión y tienda de c
 
 A continuación se detalla la contribución y responsabilidad de cada integrante en los distintos módulos del proyecto:
 
-### 👤 **Pedro ([@Pedro2004-svg](https://github.com/Pedro2004-svg))**
+### 👤 **Pedro (@Pedro2004-svg)**
 
 * 📱 **Aplicación Móvil (`MOVIL/`):** Desarrollo íntegro del cliente móvil.
 
