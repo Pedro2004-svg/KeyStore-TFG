@@ -36,10 +36,6 @@ A continuación se detalla la contribución y responsabilidad de cada integrante
 
 * [Instalación y Configuración](#-instalación-y-configuración)
 
-* [Despliegue y Uso](#-despliegue-y-uso)
-
-* [Contacto y Autoría](#-contacto-y-autoría)
-
 ## 📁 Estructura del Proyecto
 
 ```
@@ -144,22 +140,19 @@ node app.mjs
 - API REST: `http://localhost:60000`
 - Web: `http://localhost:60001`
 
-### 5. Configurar la aplicación Móvil y Android (`MOVIL/` / `android/`)
+### 5. Aplicación móvil (Android)
+
+Desde la raíz del proyecto:
 
 ```
-cd ../MOVIL
-npm install
-npx cap sync android  # Sincroniza los cambios con la carpeta nativa android
-
-```
-
-Para ejecutar en Android, abre la carpeta `android/` con **Android Studio** o ejecuta:
-
-```
+npx cap sync android
 npx cap open android
-
 ```
 
+Esto abre el proyecto en Android Studio. La app necesita saber dónde está tu API:
+cambia `API_URL` en `MOVIL/utils/common.js` por la dirección de tu servidor
+(por ejemplo, la IP local de tu PC con el puerto 60000, o un túnel como ngrok).
+  
 ## 📜 Licencia y Universidad
 
 Proyecto desarrollado dentro del marco del **Trabajo de Fin de Grado (TFG)**. 
