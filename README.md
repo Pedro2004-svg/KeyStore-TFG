@@ -120,6 +120,7 @@ Variables necesarias:
 | `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET` | Pagos con Stripe |
 | `RESEND_API_KEY` | Envío de correos |
 | `RAWG_API_KEY` | Importación de juegos desde RAWG |
+| `SESSION_SECRET` | Secreto para firmar las sesiones (una cadena larga y aleatoria) |
 
 ### 4. Arrancar la API REST y la web
 
@@ -149,9 +150,11 @@ npx cap sync android
 npx cap open android
 ```
 
-Esto abre el proyecto en Android Studio. La app necesita saber dónde está tu API:
-Sustituye la URL de API_URL en todos los archivos de MOVIL/ (en VS Code: Ctrl+Shift+H, buscar la URL actual y reemplazarla por la tuya).
-(por ejemplo, la IP local de tu PC con el puerto 60000, o un túnel como ngrok).
+ Esto abre el proyecto en Android Studio. La app necesita saber dónde está tu API:
+ busca la URL de ngrok que aparece en los archivos de `MOVIL/` y sustitúyela por la
+ dirección de tu servidor (por ejemplo, la IP local de tu PC con el puerto 60000, o
+ tu propio túnel de ngrok). En VS Code: `Ctrl+Shift+H`, buscar y reemplazar en todos
+ los archivos. Ojo: en `MOVIL/controllers/cart.js` la URL aparece dos veces.
   
 ## 📜 Licencia y Universidad
 
