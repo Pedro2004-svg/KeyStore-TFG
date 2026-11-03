@@ -81,7 +81,7 @@ KeyStore-TFG/
 
 * **Android Studio** (para abrir/compilar la carpeta `android/`)
 
-* **Capacitor CLI*
+* **Capacitor CLI**
 
 ## 🚀 Instalación y Configuración
 
@@ -93,25 +93,58 @@ cd KeyStore-TFG
 
 ```
 
-### 2. Configurar la API REST (`API_REST/`)
+### 2. Instalar dependencias
+
+Desde la raíz del proyecto (donde está el `package.json`):
+
+```
+npm install
+```
+
+### 3. Configurar las variables de entorno
+
+Copia el archivo de ejemplo y rellénalo con tus propios valores:
+
+```
+cp API_REST/configuration/.env.example API_REST/configuration/.env
+```
+
+En Windows (PowerShell):
+
+```
+copy API_REST\configuration\.env.example API_REST\configuration\.env
+```
+
+Variables necesarias:
+
+| Variable | Para qué sirve |
+|---|---|
+| `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, `DB_PASSWORD` | Conexión a PostgreSQL (Supabase) |
+| `DB_SERVICE_RK` | Clave de servicio de Supabase |
+| `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET` | Pagos con Stripe |
+| `RESEND_API_KEY` | Envío de correos |
+| `RAWG_API_KEY` | Importación de juegos desde RAWG |
+
+### 4. Arrancar la API REST y la web
+
+Cada una en su propia terminal. Primero la API:
 
 ```
 cd API_REST
-npm install
-npm run start
-
+node app.mjs
 ```
 
-### 3. Configurar la aplicación Web (`WEB/`)
+Y después la web:
 
 ```
-cd ../WEB
-npm install
-npm start
-
+cd WEB
+node app.mjs
 ```
 
-### 4. Configurar la aplicación Móvil y Android (`MOVIL/` / `android/`)
+- API REST: `http://localhost:60000`
+- Web: `http://localhost:60001`
+
+### 5. Configurar la aplicación Móvil y Android (`MOVIL/` / `android/`)
 
 ```
 cd ../MOVIL
