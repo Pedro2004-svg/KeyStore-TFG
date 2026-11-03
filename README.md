@@ -65,9 +65,9 @@ KeyStore-TFG/
 
 ## 🛠️ Tecnologías Utilizadas
 
-* **Backend / API:** API REST (Node.js/Express, Spring Boot o framework utilizado).
+* **Backend / API:** API REST (Node.js).
 
-* **Web:** HTML, CSS, JavaScript / Framework Web.
+* **Web:** HTML, CSS, JavaScript, EJS.
 
 * **Móvil & Cross-Platform:** Ionic / Web Tech + **Capacitor** para integración nativa Android.
 
@@ -75,13 +75,13 @@ KeyStore-TFG/
 
 ## ⚙️ Requisitos Previos
 
-* **Node.js** (versión recomendada LTS)
+* **Node.js**
 
 * **npm** o **yarn**
 
 * **Android Studio** (para abrir/compilar la carpeta `android/`)
 
-* **Capacitor CLI** (instalado de forma global o local)
+* **Capacitor CLI*
 
 ## 🚀 Instalación y Configuración
 
@@ -98,7 +98,7 @@ cd KeyStore-TFG
 ```
 cd API_REST
 npm install
-npm run start # o comando correspondiente
+npm run start
 
 ```
 
