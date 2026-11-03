@@ -150,7 +150,7 @@ npx cap open android
 ```
 
 Esto abre el proyecto en Android Studio. La app necesita saber dónde está tu API:
-cambia `API_URL` en `MOVIL/utils/common.js` por la dirección de tu servidor
+Sustituye la URL de API_URL en todos los archivos de MOVIL/ (en VS Code: Ctrl+Shift+H, buscar la URL actual y reemplazarla por la tuya).
 (por ejemplo, la IP local de tu PC con el puerto 60000, o un túnel como ngrok).
   
 ## 📜 Licencia y Universidad
