@@ -5,16 +5,6 @@ import dotenv from 'dotenv';
 import path from 'path';
 import pkg from 'pg';
 const { Pool } = pkg;
-
-/*PARA EL .env
-DB_HOST=aws-1-eu-central-1.pooler.supabase.com
-DB_USER=postgres.puylftxojqgqopvjdeuz
-DB_PASSWORD=neko-edd123
-DB_NAME=postgres
-DB_PORT=5432
-RAWG_API_KEY=22c79d5b81fe426cac37c693b0286fe3
-DB_SERVICE_RK=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtlamlrdmxxeWtqYW1hanphemx6Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MzM3NDczOSwiZXhwIjoyMDg4OTUwNzM5fQ.yC1qy-k5xe_A1h9W-47WQ707eIv8xw1eEuIiS35AeLE;
-*/ 
 /*
 Esquema para supabase con RLS:
 create schema if not exists private;
