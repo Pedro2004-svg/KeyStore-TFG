@@ -24,12 +24,12 @@ app.use((req, res, next) => {
 });
 
 app.use(cors({
-    origin: ["http://localhost:60001", "https://localhost", "http://192.168.50.119"],
+    origin: ["http://localhost:60001", "https://localhost"],
     credentials: true
 }));
 
 app.use(session({
-  secret: "gamestore_secret_key",
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true,
   cookie: {
